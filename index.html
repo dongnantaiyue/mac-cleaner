@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mac 重复文件清理工具 - 安全、高效</title>
+    <title>重复文件清理工具 - Mac & Windows 双平台支持</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -14,7 +14,7 @@
             line-height: 1.6;
         }
         .container {
-            max_width: 800px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 40px 20px;
             text-align: center;
@@ -36,20 +36,35 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.05);
             margin-bottom: 40px;
         }
+        /* 按钮容器 */
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
         .btn-download {
-            display: inline-block;
-            background-color: #0071e3;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             color: white;
             font-size: 18px;
-            padding: 15px 40px;
+            padding: 15px 30px;
             border-radius: 30px;
             text-decoration: none;
-            transition: background-color 0.3s;
-            margin-bottom: 20px;
+            transition: opacity 0.3s;
+            min-width: 200px;
         }
-        .btn-download:hover {
-            background-color: #0077ed;
-        }
+        .btn-download:hover { opacity: 0.9; }
+        
+        /* Mac 按钮 - 苹果蓝 */
+        .mac-btn { background-color: #0071e3; }
+        
+        /* Windows 按钮 - 微软绿 */
+        .win-btn { background-color: #2ea44f; }
+
+        .os-icon { margin-right: 10px; font-size: 20px; }
+
         .features {
             display: flex;
             justify-content: center;
@@ -66,74 +81,90 @@
         }
         .feature-icon { font-size: 30px; margin-bottom: 10px; display: block; }
         
-        .tutorial {
+        .tutorial-section {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
             text-align: left;
+        }
+        .tutorial {
+            flex: 1;
             background: #fff;
             padding: 30px;
             border-radius: 12px;
-            border-left: 5px solid #ff9500;
+            min-width: 300px;
         }
-        .tutorial h3 { color: #ff9500; margin-top: 0;}
-        code {
-            background: #eee;
-            padding: 2px 6px;
-            border-radius: 4px;
-        }
-        footer {
-            margin-top: 50px;
-            color: #86868b;
-            font-size: 12px;
-        }
+        .mac-tutorial { border-left: 5px solid #0071e3; }
+        .win-tutorial { border-left: 5px solid #2ea44f; }
+
+        .tutorial h3 { margin-top: 0;}
+        code { background: #eee; padding: 2px 6px; border-radius: 4px; }
+        footer { margin-top: 50px; color: #86868b; font-size: 12px; }
     </style>
 </head>
 <body>
 
     <div class="container">
         <div class="hero-section">
-            <h1>Mac 重复文件清理</h1>
-            <p class="subtitle">安全识别，双重确认，还你清爽桌面。</p>
+            <h1>重复文件清理工具</h1>
+            <p class="subtitle">Mac & Windows 双平台支持，让你的电脑快如闪电。</p>
             
-            <a href="MacClean_Installer.dmg" class="btn-download">
-                下载 macOS 安装包 (.dmg)
-            </a>
-            <p style="font-size: 14px; color: #86868b;">适用于 macOS 10.15 及以上 (支持 Intel & M芯片)</p>
+            <div class="btn-group">
+                <a href="MacClean_Installer.dmg" class="btn-download mac-btn">
+                    <span class="os-icon"></span> 下载 macOS 版
+                </a>
+                
+                <a href="WindowsCleaner.exe" class="btn-download win-btn">
+                    <span class="os-icon">⊞</span> 下载 Windows 版
+                </a>
+            </div>
+            <p style="font-size: 14px; color: #86868b; margin-top: 20px;">无需安装 Python，下载即用</p>
         </div>
 
         <div class="features">
             <div class="feature-card">
                 <span class="feature-icon">🔒</span>
                 <strong>安全第一</strong>
-                <p>不做永久删除，文件仅移动到回收文件夹，给你后悔药。</p>
+                <p>不做永久删除，文件仅移动到回收文件夹。</p>
             </div>
             <div class="feature-card">
                 <span class="feature-icon">🔍</span>
-                <strong>哈希比对</strong>
-                <p>不仅仅看文件名，深入比对文件内容 MD5，确保100%重复才标记。</p>
+                <strong>精准识别</strong>
+                <p>比对文件内容哈希值 (MD5)，100% 重复才标记。</p>
             </div>
             <div class="feature-card">
-                <span class="feature-icon">📊</span>
-                <strong>可视进度</strong>
-                <p>实时扫描进度条，清晰展示当前任务状态。</p>
+                <span class="feature-icon">⚡️</span>
+                <strong>原生极速</strong>
+                <p>Python 核心驱动，专为桌面端优化。</p>
             </div>
         </div>
 
-        <div class="tutorial">
-            <h3>⚠️ 安装必读：无法打开怎么办？</h3>
-            <p>由于本软件由个人开发者开发（未向 Apple 缴纳开发者年费），首次打开时可能会提示<b>“文件已损坏”</b>或<b>“无法验证开发者”</b>。</p>
-            <p><strong>解决方法：</strong></p>
-            <ol>
-                <li>下载并打开 dmg 文件，将 App 拖入“应用程序”文件夹。</li>
-                <li>在“应用程序”中找到它，不要直接双击。</li>
-                <li>对着图标点击 <strong>右键</strong> (或按住 Control 点击)，选择 <strong>“打开”</strong>。</li>
-                <li>在弹出的警告框中点击 <strong>“打开”</strong> 即可。</li>
-            </ol>
-            <p><em>* 仅第一次需要这样操作，之后即可正常双击打开。</em></p>
-            <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
-            <p><strong>无法移动文件？</strong><br>请在“系统设置 > 隐私与安全性 > 完全磁盘访问权限”中添加本应用。</p>
+        <div class="tutorial-section">
+            
+            <div class="tutorial mac-tutorial">
+                <h3 style="color: #0071e3;"> Mac 用户必读</h3>
+                <p>首次打开如果提示<b>“无法验证开发者”</b>：</p>
+                <ol>
+                    <li>将 App 拖入“应用程序”文件夹。</li>
+                    <li>对着图标点击 <strong>右键</strong>，选择 <strong>“打开”</strong>。</li>
+                    <li>在警告框中点击 <strong>“打开”</strong>。</li>
+                </ol>
+                <p><small>* 仅第一次需要这样操作。</small></p>
+            </div>
+
+            <div class="tutorial win-tutorial">
+                <h3 style="color: #2ea44f;">⊞ Windows 用户必读</h3>
+                <p>首次打开如果弹出<b>“Windows 已保护你的电脑”</b>：</p>
+                <ol>
+                    <li>点击蓝色的 <strong>“更多信息” (More info)</strong> 文字。</li>
+                    <li>点击下方的 <strong>“仍要运行” (Run anyway)</strong> 按钮。</li>
+                </ol>
+                <p><small>* 这是因为软件未购买微软数字签名，属于正常现象。</small></p>
+            </div>
         </div>
 
         <footer>
-            <p>Designed by Python & Tkinter | © 2025 Independent Developer</p>
+            <p>Designed by Independent Developer | © 2025</p>
         </footer>
     </div>
 

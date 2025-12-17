@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mac 重复文件清理工具 - 安全、高效</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+            line-height: 1.6;
+        }
+        .container {
+            max_width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        p.subtitle {
+            font-size: 24px;
+            color: #86868b;
+            margin-bottom: 40px;
+        }
+        .hero-section {
+            background: white;
+            border-radius: 20px;
+            padding: 60px 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+        .btn-download {
+            display: inline-block;
+            background-color: #0071e3;
+            color: white;
+            font-size: 18px;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            margin-bottom: 20px;
+        }
+        .btn-download:hover {
+            background-color: #0077ed;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        .feature-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            width: 200px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+        }
+        .feature-icon { font-size: 30px; margin-bottom: 10px; display: block; }
+        
+        .tutorial {
+            text-align: left;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 5px solid #ff9500;
+        }
+        .tutorial h3 { color: #ff9500; margin-top: 0;}
+        code {
+            background: #eee;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        footer {
+            margin-top: 50px;
+            color: #86868b;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="hero-section">
+            <h1>Mac 重复文件清理</h1>
+            <p class="subtitle">安全识别，双重确认，还你清爽桌面。</p>
+            
+            <a href="MacClean_Installer.dmg" class="btn-download">
+                下载 macOS 安装包 (.dmg)
+            </a>
+            <p style="font-size: 14px; color: #86868b;">适用于 macOS 10.15 及以上 (支持 Intel & M芯片)</p>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <span class="feature-icon">🔒</span>
+                <strong>安全第一</strong>
+                <p>不做永久删除，文件仅移动到回收文件夹，给你后悔药。</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🔍</span>
+                <strong>哈希比对</strong>
+                <p>不仅仅看文件名，深入比对文件内容 MD5，确保100%重复才标记。</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">📊</span>
+                <strong>可视进度</strong>
+                <p>实时扫描进度条，清晰展示当前任务状态。</p>
+            </div>
+        </div>
+
+        <div class="tutorial">
+            <h3>⚠️ 安装必读：无法打开怎么办？</h3>
+            <p>由于本软件由个人开发者开发（未向 Apple 缴纳开发者年费），首次打开时可能会提示<b>“文件已损坏”</b>或<b>“无法验证开发者”</b>。</p>
+            <p><strong>解决方法：</strong></p>
+            <ol>
+                <li>下载并打开 dmg 文件，将 App 拖入“应用程序”文件夹。</li>
+                <li>在“应用程序”中找到它，不要直接双击。</li>
+                <li>对着图标点击 <strong>右键</strong> (或按住 Control 点击)，选择 <strong>“打开”</strong>。</li>
+                <li>在弹出的警告框中点击 <strong>“打开”</strong> 即可。</li>
+            </ol>
+            <p><em>* 仅第一次需要这样操作，之后即可正常双击打开。</em></p>
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+            <p><strong>无法移动文件？</strong><br>请在“系统设置 > 隐私与安全性 > 完全磁盘访问权限”中添加本应用。</p>
+        </div>
+
+        <footer>
+            <p>Designed by Python & Tkinter | © 2025 Independent Developer</p>
+        </footer>
+    </div>
+
+</body>
+</html>
